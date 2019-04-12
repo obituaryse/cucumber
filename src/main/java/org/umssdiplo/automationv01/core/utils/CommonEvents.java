@@ -22,6 +22,10 @@ public class CommonEvents {
         webElement.clear();
         webElement.sendKeys(content);
     }
+    public static void setInputFieldDate(WebElement webElement, String content) {
+        ManageDriver.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
+        webElement.sendKeys(content);
+    }
 
     /**
      * This method perform a click action in a web element.
@@ -114,6 +118,10 @@ public class CommonEvents {
      */
     public static void pressEnterKey(WebElement webElement) {
         webElement.sendKeys(Keys.ENTER);
+    }
+
+    public static void waitWebElementVisible(WebElement element){
+        ManageDriver.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
     }
 
 }

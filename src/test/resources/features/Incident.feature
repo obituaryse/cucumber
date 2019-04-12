@@ -1,4 +1,5 @@
 Feature: Funcionalidad de Incidentes
 
-  Background: Login user
-    Given 'ISOCODE' page is loaded
+  Scenario: Registro de accidentes
+    Given 'PHP travel' page is loaded
+    And click 'Registrar Accidente' tab in 'header' page
