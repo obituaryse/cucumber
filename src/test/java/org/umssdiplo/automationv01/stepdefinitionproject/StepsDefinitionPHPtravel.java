@@ -28,15 +28,6 @@ public class StepsDefinitionPHPtravel {
         login.clickRegistrarAccidenteTab();
     }
 
-    @Given("^registro de una persona a traves de interfaz$")
-    public void registroDeUnaPersonaATravesDeInterfaz() {
-        login = LoadPage.loginPage();
-        login.clickRegistrarPersona();
-    }
-
-    @And("^ingresar a interfaz de registro$")
-    public void ingresarAInterfazDeRegistro() {
-    }
 
     @And("^registrar formulario$")
     public void registrarFormulario() {
@@ -75,35 +66,17 @@ public class StepsDefinitionPHPtravel {
         login.eliminarPersona(arg0);
     }
 
-    @And("^asjsjsjsjjs 'asdf' yy '(\\d+)' hhh \"([^\"]*)\"$")
-    public void asjsjsjsjjsAsdfYyHhh(int arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
     @Then("^verificar que el registro fue exitoso$")
     public void verificarQueElRegistroFueExitoso() {
-
+        isocode.verificarElRegistro();
     }
 
-    @And("^registrar formulario con los datos \"([^\"]*)\"$")
-    public void registrarFormularioConLosDatos(String persona) throws Throwable {
-        Persona p = new Persona();
-        p.setNombres(persona);
-        p.setApellidos("morales");
-        p.setDireccion("temporal calle 10");
-        p.setEmail("personaUno@gmail.com");
-        p.setNacimiento("19091990");
-        p.setNacionalidad("Bolivia");
-        p.setTelefono("67504804");
-        p.setCi("5165165");
-        login.registrarFormularioPersona(p);
-        throw new PendingException();
-    }
 
     @And("^realizar la actualizacion del nombre por \"([^\"]*)\"$")
     public void realizarLaActualizacionDelNombrePor(String arg0) throws Throwable {
         login.actualizarFormularioPersona(arg0);
         throw new PendingException();
     }
+
 }
